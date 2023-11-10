@@ -219,6 +219,7 @@ Feedstock Maintainers
 =====================
 
 * [@IAlibay](https://github.com/IAlibay/)
+* [@enoee](https://github.com/enoee/)
 * [@ianmkenney](https://github.com/ianmkenney/)
 * [@orbeckst](https://github.com/orbeckst/)
 
