@@ -28,6 +28,8 @@ requirements:
     - python
     - mdanalysis >=2.0.0
     - {{ pin_compatible('numpy') }}
+    - joblib
+    - scipy
 
 test:
   imports:
