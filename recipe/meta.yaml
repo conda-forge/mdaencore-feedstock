@@ -1,5 +1,5 @@
 {% set name = "mdaencore" %}
-{% set version = "0.1.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mdaencore-{{ version }}.tar.gz
-  sha256: a67ae5f3f2346be7ebfd82686ccd936e6284c420490e96c3620783a850fcb814
+  sha256: ba34144b441cdfc0d04d7e079edd8318e8b8035671ac11df84140345957d6e91
 
 build:
+  skip: true  # [py>311]
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -28,6 +29,8 @@ requirements:
     - python
     - mdanalysis >=2.0.0
     - {{ pin_compatible('numpy') }}
+    - joblib
+    - scipy
 
 test:
   imports:
@@ -40,7 +43,7 @@ test:
 about:
   home: https://github.com/MDAnalysis/mdaencore
   summary: Ensemble overlap comparison software for molecular data.
-  license: GPL-2.0-or-later
+  license: GPL-3.0-or-later
   license_file: LICENSE
 
 extra:
