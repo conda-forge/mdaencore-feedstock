@@ -27,12 +27,12 @@ requirements:
     - setuptools >=40.9.0
     - wheel
     - cython
-    - numpy
+    - numpy  {{ numpy }}
     - pip
   run:
     - python
     - mdanalysis >=2.0.0
-    - {{ pin_compatible('numpy') }}
+    - {{ pin_compatible('numpy', lower_bound='1.22.3') }}
     - joblib
     - scipy
 
