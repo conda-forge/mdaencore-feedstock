@@ -10,7 +10,7 @@ source:
   sha256: 82ea52998edb1bdf797736c054eb6e3caa8f48d6b5972fe10d48f7f353ff8f52
 
 build:
-  skip: true  # [py>313]
+  skip: true  # [py>314]
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -25,14 +25,14 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - python
-    - setuptools >=40.9.0
+    - setuptools >=61.2
     - wheel
     - cython
     - numpy  {{ numpy }}
     - pip
   run:
     - python
-    - mdanalysis >=2.0.0
+    - mdanalysis >=2.1.0
     - joblib
     - scipy
 
