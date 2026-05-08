@@ -1,5 +1,5 @@
 {% set name = "mdaencore" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mdaencore-{{ version }}.tar.gz
-  sha256: ba34144b441cdfc0d04d7e079edd8318e8b8035671ac11df84140345957d6e91
+  sha256: 82ea52998edb1bdf797736c054eb6e3caa8f48d6b5972fe10d48f7f353ff8f52
 
 build:
   skip: true  # [py>313]
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
